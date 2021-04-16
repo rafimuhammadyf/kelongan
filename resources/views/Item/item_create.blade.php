@@ -40,7 +40,7 @@
   				</div>
 				<div class="col-md-6">
 					<label for="validationDefault03" class="form-label">Stock</label>
-					<input type="text" class="form-control" id="validationDefault03" name="stock" placeholder="Stock" required>
+					<input type="text" class="form-control" id="validationDefault03" name="stock" placeholder="Stock" required au>
 				</div>
 				<div class="mb-3">
     				<label for="validationTextarea" class="form-label">deskription</label>

@@ -14,7 +14,7 @@ class Transaksi extends Model
         'nama_items', 
         'qty', 
         'total_price', 
-        'id_merchant',
+        'id_merchant', 
         'name_merchant'
     ];
     protected $table = "transaksi";

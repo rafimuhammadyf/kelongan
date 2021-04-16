@@ -9,7 +9,7 @@
 
 <br>
 <br>
-<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
 <div class="container">
 	<br>
 <h1>Tambah Transaksi Baru</h1>
@@ -29,8 +29,6 @@
 						<option>1</option>
 						<option>2</option>
 						<option>3</option>
-						<option>4</option>
-						<option>5</option>
 					</select>
 				</div>
 				<div class="col-md-6">
@@ -41,11 +39,11 @@
 				</div>
 				<div class="col-md-6">
 				<label for="validationDefault03" class="form-label">Qty</label>
-					<input type="number" id="validationDefault03" class="form-control" aria-label="file example" name="qty" min="1" max="5" v-model:value="qty" required>
+					<input type="number" id="validationDefault03" class="form-control" aria-label="file example" name="qty" min="1" max="5" required>
   				</div>
 				<div class="col-md-6">
 					<label for="validationDefault04" class="form-label">Total Price</label>
-					<input type="number" class="form-control" id="validationDefault04" name="total_price" placeholder="Harga yang dibayar" v-text="qty" required>
+					<input type="number" class="form-control" id="validationDefault04" name="total_price" placeholder="Harga yang dibayar" required>
 				</div>
 				<div class="col-md-6">
     				<label for="validationTextarea" class="form-label">ID Merchant</label>
@@ -56,7 +54,6 @@
     				<input class="form-control" id="validationTextarea2" value="" name="name_merchant" placeholder="Merchant" required>
     			</div>
 				<div class="col-12">
-					<br>
 					<button class="btn btn-primary" type="submit" >Simpan</button>
 					<a href="{{url('transaksi')}}" class="btn btn-success">Kembali</a><br><br>
 				</div>
