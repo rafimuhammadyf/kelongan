@@ -15,8 +15,8 @@ class TransaksiController extends Controller
     public function index()
     {
         $data = DB::table('transaksi')
-                        ->select('transaksi.id', 'transaksi.id_items', 'items.nama_items', 'transaksi.qty','transaksi.total_price', 'items.id_merchant')
-                        ->join('items', 'transaksi.id', '=', 'items.id')
+                        ->select('transaksi.id', 'transaksi.id_items', 'transaksi.nama_items', 'transaksi.qty','transaksi.total_price', 'items.id_merchant')
+                        ->join('items', 'transaksi.id_items', '=', 'items.id')
                         ->get();
         
         return view('transaksi.transaksi', compact('data'));
@@ -58,7 +58,7 @@ class TransaksiController extends Controller
     public function edit($id)
     {
         $data = transaksi::where('id', $id)->get();
-        return view('Transaksi.transaksi_update', compact('data'));
+        return view('transaksi.transaksi_update', compact('data'));
     }
     public function update(Request $request, $id)
     {

@@ -57,6 +57,7 @@
     color: #ff5c3e;
     font-size: 20px;
     float: right;
+    margin-top: -30px;
   }
   footer{
     background-color: #545454 !important;
@@ -81,7 +82,7 @@
       <div class="col-lg-5">
         <h1 style="text-align: left; font-weight: lighter;">Dijamin Halal!</h1>
         <p>Kelongan.id menyediakan produk kebutuhan bahan masakan rumah tangga. Segala produk yang kami sediakan pasti terjamin kehalalan dan keberkahannya.</p>
-        <a class="btn btn-primary" href="{{ url('/transaksi_create') }}">Beli Sekarang!</a>
+        <a class="btn btn-primary" href="{{ url('/cart') }}">Beli Sekarang!</a>
       </div>
       <!-- /.col-md-4 -->
     </div>
@@ -96,21 +97,24 @@
 
     <!-- Content Row -->
     <div class="row">
+      @foreach($data as $dt)
       <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
-            <h2 class="card-title">Daging Sapi</h2>
-            <img src="image/home/daging2.jpg">
-            <p class="card-text">Kalongan.id menyediakan daging sapi yang syar'i. Daging sapi dari kami terjamin kebersihan dan ketersediannya.</p>
+            <h2 class="card-title">{{ $dt->nama_items}}</h2>
+            <img src="/Uploads/{{$dt->picture}}">
+            <p class="card-text">{{ $dt->deskription }}</p>
           </div>
           <div class="card-footer">
-            <a href="{{ url('/item') }}" class="btn btn-primary btn-sm">Detail Produk</a>
-            <p>Rp. 150.000</p>
+            <form action="{{ url('cart_store') }}" method="post">
+            <button class="btn btn-primary btn-sm"> + Tambah ke Keranjang</button></form>
+            <p>Rp. {{ $dt->price }}</p>
           </div>
         </div>
       </div>
+      @endforeach
       <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
+      <!-- <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
             <h2 class="card-title">Daging Ayam</h2>
@@ -122,9 +126,9 @@
             <p>Rp. 35.000</p>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- /.col-md-4 -->
-      <div class="col-md-4 mb-5">
+      <!-- <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
             <h2 class="card-title">Daging Kambing</h2>
@@ -136,10 +140,10 @@
             <p>Rp. 100.000</p>
           </div>
         </div>
-      </div>
+      </div> -->
       <!-- /.col-md-4 -->
 
-      <div class="col-md-4 mb-5">
+      <!-- <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
             <h2 class="card-title">Beras</h2>
@@ -151,9 +155,9 @@
             <p>Rp. 65.000</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="col-md-4 mb-5">
+      <!-- <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
             <h2 class="card-title">Minyak</h2>
@@ -165,9 +169,9 @@
             <p>Rp. 15.000</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
-      <div class="col-md-4 mb-5">
+      <!-- <div class="col-md-4 mb-5">
         <div class="card h-100">
           <div class="card-body">
             <h2 class="card-title">Tepung</h2>
@@ -179,7 +183,7 @@
             <p>Rp. 10.000</p>
           </div>
         </div>
-      </div>
+      </div> -->
 
     </div>
     <!-- /.row -->

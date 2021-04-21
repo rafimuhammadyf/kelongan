@@ -25,7 +25,7 @@
 					<label class="form-label">Id Item</label><br>
 					<!-- <input type="text" class="form-control" id="validationDefault01" name="type" placeholder="type" required> -->
 					<select style="width: 100%; height: 37px;" name="id_items">
-						<option value="{{$dt->id_items}}"></option>
+						<option>{{$dt->id_items}}</option>
 					</select>
 				</div>
 				<div class="col-md-6">
