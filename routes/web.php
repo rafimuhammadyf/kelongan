@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\CartController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\MerchantController;
@@ -11,7 +12,7 @@ use App\Http\Controllers\SellerController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\TransaksiController;
 
- 
+  
 
 /*
 |--------------------------------------------------------------------------
@@ -80,3 +81,9 @@ Route::post('transaksi_store', [TransaksiController::class, 'store']);
 Route::get('transaksi_edit/{id}', [TransaksiController::class, 'edit']);
 Route::put('transaksi_update/{id}', [TransaksiController::class, 'update']);
 Route::delete('transaksi_destroy/{id}', [TransaksiController::class, 'destroy']);
+
+//Transit Cart
+Route::get('cart', [CartController::class, 'index']);
+Route::post('cart_store', [CartController::class, 'store']);
+Route::put('cart_update/{id}', [CartController::class, 'update']);
+Route::delete('cart_destroy/{id}', [CartController::class, 'destroy']);

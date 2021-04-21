@@ -1,4 +1,4 @@
-<!doctype html>
+<!doctype html> 
 <html lang="en">
   <head>
   	<title>Kelongan.id | Register</title>
@@ -11,10 +11,22 @@
 	
 	<link rel="stylesheet" href="{{ url('Login/css/style.css') }}">
 
+	<style type="text/css">
+		body{
+			background-color: #f4f4f4;
+		}
+		#biru-bg{
+			background-color: #005d68 !important;
+		}
+		#biru-txt{
+			color: #005d68 !important;
+		}
+	</style>
+
 	</head>
 	<body>
-	<section class="ftco-section">
-	@if ($errors->any())
+
+		@if ($errors->any())
     <div class="alert alert-danger">
         <ul>
             @foreach ($errors->all() as $error)
@@ -22,7 +34,10 @@
             @endforeach
         </ul>
     </div>
-@endif
+	@endif
+
+	<section class="ftco-section">
+	
 		<div class="container">
 			<!-- <div class="row justify-content-center">
 				<div class="col-md-6 text-center mb-5">
@@ -32,21 +47,24 @@
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-5">
 					<div class="login-wrap p-4 p-md-5">
-		      	<div class="icon d-flex align-items-center justify-content-center">
+		      	<div id="biru-bg" class="icon d-flex align-items-center justify-content-center">
 		      		<span class="fa fa-user-o"></span>
 		      	</div>
-		      	<h3 class="text-center mb-4">Create an Account</h3>
+		      	<h3 class="text-center mb-4" id="biru-txt">Buat akun baru</h3>
 						<form action="{{url('/register_create')}}" class="login-form" method="post">
 						{{ csrf_field() }}
                         <div class="form-group">
-		      			    <input type="text" class="form-control rounded-left" name="email" placeholder="Email" required>
+		      			    <input type="email" class="form-control rounded-left" name="email" placeholder="Email" required autocomplete="off">
 		      		    </div>
 	                    <div class="form-group d-flex">
 	                        <input type="password" class="form-control rounded-left" name="password" placeholder="Password" required>
 	                    </div>
 						<div class="form-group d-flex">
-	                        <input type="name" class="form-control rounded-left" name="name" placeholder="name" required>
+	                        <input type="text" class="form-control rounded-left" name="name" placeholder="Nama Lengkap" required autocomplete="off">
 	                    </div>
+						<div class="text-md-right">
+							<a href="{{url('/log in')}}" id="biru-txt">Masuk</a>
+						</div>
 						<!-- <div class="form-group d-flex">
 	                        <input type="text" class="form-control rounded-left" name="level" placeholder="Level" required>
 	                    </div> -->
@@ -63,7 +81,7 @@
 	            <!-- </div> -->
 				<!-- <a href="" >Create an Account</a> -->
 	            <div class="form-group">
-	            	<button type="submit" class="btn btn-primary rounded submit p-3 px-5">Sign Up</button>
+	            	<button type="submit" id="biru-bg" style="margin-top: 15px;" class="btn btn-primary rounded submit p-3 px-5">Daftarkan</button>
 	            </div>
                 <!-- <a href="{{url('/log in')}}" class="btn btn-success">Kembali</a> -->
 	          </form>

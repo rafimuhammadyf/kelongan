@@ -1,5 +1,5 @@
 @extends('template')
-
+ 
 @section('content')
 <!DOCTYPE html>
 <html>

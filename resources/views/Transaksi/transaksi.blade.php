@@ -17,8 +17,7 @@
       </div>
     @endif
     <br>
-    <h1 style="float: left;">Transaksi</h1><br>
-        <a href="{{url('transaksi_create')}}" style="float: right;" class="btn btn-sm btn-success">Tambah data transaksi</a><br><br>
+    <h1>Transaksi</h1><br>
         <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0" style="clear: both;">
             <thead>
               <tr>

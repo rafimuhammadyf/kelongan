@@ -97,7 +97,7 @@
             <a class="nav-link" href="{{ url('/admin') }}">Admin</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/cart') }}">Keranjang (0)</a>
+            <a class="nav-link" href="{{ url('/cart') }}">Keranjang <b>({{ $data->count()}})</b></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/transaksi') }}">Transaksi</a>

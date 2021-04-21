@@ -57,6 +57,7 @@
     color: #ff5c3e;
     font-size: 20px;
     float: right;
+    margin-top: -30px;
   }
   footer{
     background-color: #545454 !important;
@@ -105,7 +106,8 @@
             <p class="card-text">{{ $dt->deskription }}</p>
           </div>
           <div class="card-footer">
-            <a href="{{ url('/cart') }}" class="btn btn-primary btn-sm"> + Tambah ke Keranjang</a>
+            <form action="{{ url('cart_store') }}" method="post">
+            <button class="btn btn-primary btn-sm"> + Tambah ke Keranjang</button></form>
             <p>Rp. {{ $dt->price }}</p>
           </div>
         </div>
